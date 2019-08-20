@@ -55,24 +55,58 @@ console.log(getLength(items,lengthCheck));
 
 
 let logLast = function(itemInArray){
-
+  return itemInArray[itemInArray.length-1];
 }
+// let logLast = itemInArray => itemInArray[itemInArray.length-1];
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr);
 }
+console.log(last(items, logLast));
 
+
+
+
+
+let sum = (num1, num2) => num1 + num2;
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  console.log(cb(x,y));
+  return cb(x,y);
 }
+sumNums(1,10,sum);
 
+
+
+
+
+let multiply = (num1, num2) => num1 * num2;
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  console.log(cb(x,y));
+  return cb(x,y);
 }
+multiplyNums(2,11,multiply);
 
+
+
+
+const factCheck = function(item, arr){
+	for(let i=0; i<arr.length; i++){
+		if (arr[i] === 'Gum'){
+		return `True! Item: '${item}' is on list: ${arr}`
+		}
+	}
+}
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(item,list);
 }
+console.log(contains("Gum",items,factCheck));
+
+
+
 
 /* STRETCH PROBLEM */
 
