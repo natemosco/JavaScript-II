@@ -3,7 +3,16 @@
 // Keep it simple! Remember a closure is just a function
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
-
+function sayHello(name){
+  let alternateText = `To YOU`;
+  function sayGoodbye(name){
+    let standardText = `To ME`;
+    return `Goodbye ${name}` + alternateText + standardText;
+  } 
+  console.log(sayGoodbye("johnny"));
+  return `Hello ${alternateText} ${name}`;
+} 
+console.log(sayHello("bob"));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
