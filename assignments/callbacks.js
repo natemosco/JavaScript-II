@@ -107,11 +107,18 @@ console.log(contains("Gum",items,factCheck));
 
 
 
-
 /* STRETCH PROBLEM */
-
+var duplicateArr = [1,1,2,2,"string","string"];
+let singlesArr = duplicateArr.filter(function(currentValue, index){
+  if(duplicateArr.lastIndexOf(currentValue) === index){
+    return currentValue;
+  };
+}
+);
+console.log(singlesArr);
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
 }
